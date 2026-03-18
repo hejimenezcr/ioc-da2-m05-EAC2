@@ -1,1 +1,18 @@
-jghkll
+git config --global user.email "h_jimenezcruz@hotmail.com"
+git config --global user.name "hejimenezcr"
+
+
+…o crear un nuevo repositorio en la línea de comandos
+echo "# ioc-da2-m05-EAC2" >> README.md 
+git init 
+git add README.md 
+git commit -m "primer commit" 
+git branch -M main 
+git remote add origin https://github.com/hejimenezcr/ioc-da2-m05-EAC2.git
+ git push -u origin main
+
+…o bien, actualiza un repositorio existente desde la línea de comandos.
+
+git remote add origin https://github.com/hejimenezcr/ioc-da2-m05-EAC2.git
+ git branch -M main 
+git push -u origin main
