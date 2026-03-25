@@ -1,0 +1,454 @@
+1 -> En el apartado de Disgn estipularemos las caracteristicas de la pantalla.
+
+2 -> En "frame" buscaremos el parametro "resizeable" para poder estipular que no cambie el tamañp de la pantalla estipilando en "false".
+
+3 -> En "frame" buscaremos el parametro "title" para poder ponerle un titulo a la pantalla.
+
+4 -> En el menu central en el apartado "layouts" clicaremos sobre "Absolute Layout".
+
+5 -> En el menu central en el apartado "Containers" clicaremos sobre "JPanel" para poder crear un contenedor. En uno de su apartados estipular apartado "layouts" clicaremos sobre "Absolute Layout", para poder ubicar las los diverso compontes como sea necesario para nuetras nececisades.
+
+6 -> Que daa uno de los JPanel les pondremos un nombre para poder identificarlos.
+
+JFrame
+ ├── JPanel (Dades Clients)
+ ├── JPanel (Campanya)
+ ├── JPanel (PREUS)
+ └── JPanel (Errors i Alertes)
+
+7 -> zzzzzzzzzz
+
+8 -> Pondremos el boton i despues lo explicamos como se llamaran las etiquetas para que sea identificatorio
+
+
+------------------------------------------------------------------------------------
+
+2. COMPONENTES QUE NECESITAS
+📌 Datos del cliente
+JTextField → antigüedad
+JComboBox → paquete de servicios
+JComboBox → tipo empresa
+JButton → validar
+📌 Campaña
+JComboBox → redes sociales (Sí/No)
+JComboBox → SEM (Sí/No)
+JTextField → descuento
+JButton → calcular
+Botón J → restablecer
+📌 Salida
+JTextField → precio base
+JTextField → antes de impuestos
+JTextField → IVA
+JTextField → total
+📌 Errores
+JTextArea → mensajes
+
+
+
+
+
+
+
+
+------------------------------------------------------------------------------------
+Codio a revisar o ver donde va....
+
+
+CÓDIGO BASE DE LA VENTANA
+
+import javax.swing.*;
+import javax.swing.border.TitledBorder;
+import java.awt.*;
+
+public class PacksMarketing extends JFrame {
+
+    public PacksMarketing() {
+        setTitle("PacksMarketing TuApellido");
+        setSize(500, 600);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setLocationRelativeTo(null);
+        getContentPane().setLayout(null);
+
+        crearDadesClient();
+        crearCampanya();
+        crearPreus();
+        crearErrors();
+    }
+
+    public static void main(String[] args) {
+        SwingUtilities.invokeLater(() -> {
+            new PacksMarketing().setVisible(true);
+        });
+    }
+
+
+------------------------------------------------------------------------------------
+
+3. PANEL "PADRES CLIENTES"
+
+private void crearDadesClient() {
+    JPanel panel = new JPanel();
+    panel.setBorder(new TitledBorder("Dades Clients"));
+    panel.setBounds(20, 20, 440, 140);
+    panel.setLayout(null);
+    add(panel);
+
+    JLabel lblAntiguitat = new JLabel("Antiguitat");
+    lblAntiguitat.setBounds(10, 25, 100, 20);
+    panel.add(lblAntiguitat);
+
+    JTextField txtAntiguitat = new JTextField();
+    txtAntiguitat.setBounds(120, 25, 80, 20);
+    txtAntiguitat.setToolTipText("Introdueix anys (0-150)");
+    panel.add(txtAntiguitat);
+
+    JLabel lblAnys = new JLabel("anys");
+    lblAnys.setBounds(210, 25, 50, 20);
+    panel.add(lblAnys);
+
+    JLabel lblPack = new JLabel("Pack de");
+    lblPack.setBounds(10, 55, 100, 20);
+    panel.add(lblPack);
+
+    JComboBox<String> comboPack = new JComboBox<>();
+    comboPack.addItem("BASIC");
+    comboPack.addItem("ESTÀNDARD");
+    comboPack.addItem("FULL");
+    comboPack.addItem("PRÈMIUM");
+    comboPack.setBounds(120, 55, 150, 20);
+    panel.add(comboPack);
+
+    JLabel lblTipus = new JLabel("Tipus de");
+    lblTipus.setBounds(10, 85, 100, 20);
+    panel.add(lblTipus);
+
+    JComboBox<String> comboEmpresa = new JComboBox<>();
+    comboEmpresa.addItem("Autònom");
+    comboEmpresa.addItem("PIME");
+    comboEmpresa.addItem("Gran empresa");
+    comboEmpresa.setBounds(120, 85, 150, 20);
+    panel.add(comboEmpresa);
+
+    JButton btnValidar = new JButton("VALIDAR");
+    btnValidar.setBounds(150, 110, 120, 25);
+    panel.add(btnValidar);
+}
+
+
+
+------------------------------------------------------------------------------------
+
+4. PANEL "CAMPANYA"
+
+private void crearCampanya() {
+    JPanel panel = new JPanel();
+    panel.setBorder(new TitledBorder("Campanya"));
+    panel.setBounds(20, 170, 440, 150);
+    panel.setLayout(null);
+    add(panel);
+
+    JLabel lblDte = new JLabel("Dte.");
+    lblDte.setBounds(10, 25, 50, 20);
+    panel.add(lblDte);
+
+    JTextField txtDte = new JTextField();
+    txtDte.setBounds(80, 25, 80, 20);
+    panel.add(txtDte);
+
+    JLabel lblEuro = new JLabel("€");
+    lblEuro.setBounds(170, 25, 20, 20);
+    panel.add(lblEuro);
+
+    JLabel lblXXSS = new JLabel("Gestió de XXSS");
+    lblXXSS.setBounds(10, 60, 120, 20);
+    panel.add(lblXXSS);
+
+    JComboBox<String> comboXXSS = new JComboBox<>();
+    comboXXSS.addItem("Sí");
+    comboXXSS.addItem("No");
+    comboXXSS.setBounds(140, 60, 100, 20);
+    panel.add(comboXXSS);
+
+    JLabel lblSEM = new JLabel("Publicitat SEM");
+    lblSEM.setBounds(10, 90, 120, 20);
+    panel.add(lblSEM);
+
+    JComboBox<String> comboSEM = new JComboBox<>();
+    comboSEM.addItem("Sí");
+    comboSEM.addItem("No");
+    comboSEM.setBounds(140, 90, 100, 20);
+    panel.add(comboSEM);
+
+    JButton btnReset = new JButton("ESBORRAR TOT");
+    btnReset.setBounds(50, 115, 150, 25);
+    panel.add(btnReset);
+
+    JButton btnCalcular = new JButton("CALCULAR");
+    btnCalcular.setBounds(220, 115, 150, 25);
+    panel.add(btnCalcular);
+}
+
+
+------------------------------------------------------------------------------------
+
+5. PANEL "PREUS"
+
+private void crearPreus() {
+    JPanel panel = new JPanel();
+    panel.setBorder(new TitledBorder("PREUS"));
+    panel.setBounds(20, 330, 440, 100);
+    panel.setLayout(null);
+    add(panel);
+
+    JLabel lblBase = new JLabel("Base");
+    lblBase.setBounds(10, 25, 50, 20);
+    panel.add(lblBase);
+
+    JTextField txtBase = new JTextField();
+    txtBase.setBounds(60, 25, 80, 20);
+    txtBase.setEditable(false);
+    panel.add(txtBase);
+
+    JLabel lblIVA = new JLabel("IVA");
+    lblIVA.setBounds(160, 25, 50, 20);
+    panel.add(lblIVA);
+
+    JTextField txtIVA = new JTextField();
+    txtIVA.setBounds(200, 25, 80, 20);
+    txtIVA.setEditable(false);
+    panel.add(txtIVA);
+
+    JLabel lblTotal = new JLabel("TOTAL");
+    lblTotal.setBounds(10, 60, 50, 20);
+    panel.add(lblTotal);
+
+    JTextField txtTotal = new JTextField();
+    txtTotal.setBounds(60, 60, 120, 20);
+    txtTotal.setEditable(false);
+    panel.add(txtTotal);
+}
+
+------------------------------------------------------------------------------------
+
+6. PANEL "ERRORES"
+
+
+private void crearErrors() {
+    JPanel panel = new JPanel();
+    panel.setBorder(new TitledBorder("Errors i Alertes"));
+    panel.setBounds(20, 440, 440, 80);
+    panel.setLayout(null);
+    add(panel);
+
+    JTextArea txtErrors = new JTextArea();
+    txtErrors.setBounds(10, 20, 410, 40);
+    txtErrors.setEditable(false);
+    panel.add(txtErrors);
+}
+
+
+------------------------------------------------------------------------------------
+
+Verificar desde aqui nose....
+
+------------------------------------------------------------------------------------
+
+
+3. VALIDACIÓN (BOTÓN VALIDAR)
+
+String antiguitatText = txtAntiguitat.getText();
+
+try {
+    int antiguitat = Integer.parseInt(antiguitatText);
+
+    if (antiguitat < 0 || antiguitat > 150) {
+        txtErrors.setText("Antiguitat incorrecta (0-150)");
+        txtAntiguitat.requestFocus();
+        txtAntiguitat.selectAll();
+        return;
+    }
+
+} catch (NumberFormatException e) {
+    txtErrors.setText("Antiguitat incorrecta (enter entre 0 i 150)");
+    txtAntiguitat.requestFocus();
+    txtAntiguitat.selectAll();
+    return;
+}
+
+
+
+------------------------------------------------------------------------------------
+
+Validar combos
+
+if (comboPack.getSelectedIndex() == -1) {
+    txtErrors.setText("Selecciona un pack");
+    comboPack.requestFocus();
+    return;
+}
+
+------------------------------------------------------------------------------------
+
+Si todo OK
+
+// Desactivar parte superior
+txtAntiguitat.setEnabled(false);
+comboPack.setEnabled(false);
+
+// Activar campaña
+comboXXSS.setEnabled(true);
+comboSEM.setEnabled(true);
+txtDescompte.setEnabled(true);
+btnCalcular.setEnabled(true);
+btnReset.setEnabled(true);
+
+txtErrors.setText("");
+
+------------------------------------------------------------------------------------
+
+4. CÁLCULO (BOTÓN CALCULAR)
+
+double preuBase = 0;
+
+switch (comboPack.getSelectedItem().toString()) {
+    case "BASIC": preuBase = 200; break;
+    case "ESTÀNDARD": preuBase = 450; break;
+    case "FULL": preuBase = 800; break;
+    case "PRÈMIUM": preuBase = 1200; break;
+}
+
+------------------------------------------------------------------------------------
+
+Factores
+
+double factorAntiguitat = (antiguitat >= 10) ? 0.9 : 1;
+
+double factorEmpresa = 1;
+switch (comboEmpresa.getSelectedItem().toString()) {
+    case "Autònom": factorEmpresa = 0.8; break;
+    case "PIME": factorEmpresa = 1; break;
+    case "Gran empresa": factorEmpresa = 1.2; break;
+}
+
+------------------------------------------------------------------------------------
+
+Extras
+
+double extras = 0;
+
+if (comboXXSS.getSelectedItem().equals("Sí")) {
+    extras += 150;
+}
+if (comboSEM.getSelectedItem().equals("Sí")) {
+    extras += 250;
+}
+
+------------------------------------------------------------------------------------
+
+Descuento
+
+double descompte;
+
+try {
+    descompte = Double.parseDouble(txtDescompte.getText());
+
+    if (descompte < 0 || descompte >= preuBase) {
+        txtErrors.setText("Descompte incorrecte");
+        txtDescompte.requestFocus();
+        txtDescompte.selectAll();
+        return;
+    }
+
+} catch (Exception e) {
+    txtErrors.setText("Format descompte incorrecte");
+    return;
+}
+
+------------------------------------------------------------------------------------
+
+Cálculos finales
+
+double abansImpostos = preuBase * factorAntiguitat * factorEmpresa;
+abansImpostos = abansImpostos + extras - descompte;
+
+double iva = abansImpostos * 0.21;
+double total = abansImpostos + iva;
+
+
+
+------------------------------------------------------------------------------------
+
+Mostrar resultados
+
+txtPreuBase.setText(String.valueOf(preuBase));
+txtAbansImpostos.setText(String.valueOf(abansImpostos));
+txtIVA.setText(String.valueOf(iva));
+txtTotal.setText(String.valueOf(total));
+
+
+
+
+------------------------------------------------------------------------------------
+5. BOTÓN RESET
+
+
+txtAntiguitat.setText("");
+comboPack.setSelectedIndex(-1);
+
+txtPreuBase.setText("");
+txtErrors.setText("");
+
+// Activar arriba
+txtAntiguitat.setEnabled(true);
+comboPack.setEnabled(true);
+
+// Desactivar abajo
+comboXXSS.setEnabled(false);
+txtDescompte.setEnabled(false);
+
+
+------------------------------------------------------------------------------------
+
+la parte que viene ahora no tegon claro para que???
+------------------------------------------------------------------------------------
+
+
+PARTE 2: PRIMAVERA (MUY SIMPLE)
+
+
+result = numero * 2;
+
+result = numero * 5;
+
+HTML
+
+<p>DNI: TU_DNI</p>
+------------------------------------------------------------------------------------
+
+
+PARTE 3: CODEIUM
+
+1. Contar vocales
+
+public static int contarVocales(String texto) {
+    int contador = 0;
+    texto = texto.toLowerCase();
+
+    for (char c : texto.toCharArray()) {
+        if ("aeiou".indexOf(c) != -1) {
+            contador++;
+        }
+    }
+    return contador;
+}
+
+
+
+------------------------------------------------------------------------------------
+
+Reemplazar espacios
+
+
+public static String reemplazarEspacios(String texto) {
+    return texto.replace(" ", "_");
+}
