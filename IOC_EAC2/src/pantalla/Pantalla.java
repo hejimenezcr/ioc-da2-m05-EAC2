@@ -10,11 +10,18 @@ import javax.swing.border.EtchedBorder;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 import javax.swing.JButton;
+import javax.swing.JComboBox;
+import java.awt.Font;
 
 public class Pantalla {
 
 	private JFrame frmPacksmarketingJimenez;
 	private JTextField textEntradaAny;
+	private JTextField textDte;
+	private JTextField textBase;
+	private JTextField textIVA;
+	private JTextField textTotal;
+	private JTextField textErrorAlertes;
 
 	/**
 	 * Launch the application.
@@ -46,49 +53,162 @@ public class Pantalla {
 		frmPacksmarketingJimenez = new JFrame();
 		frmPacksmarketingJimenez.setTitle("PacksMarketing Jimenez");
 		frmPacksmarketingJimenez.setResizable(false);
-		frmPacksmarketingJimenez.setBounds(100, 100, 490, 576);
+		frmPacksmarketingJimenez.setBounds(100, 100, 490, 716);
 		frmPacksmarketingJimenez.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frmPacksmarketingJimenez.getContentPane().setLayout(null);
 		
 		JPanel panel_Dades_Clilent = new JPanel();
 		panel_Dades_Clilent.setBorder(new TitledBorder(new EtchedBorder(EtchedBorder.LOWERED, new Color(255, 255, 255), new Color(160, 160, 160)), "Dades Clients", TitledBorder.LEFT, TitledBorder.TOP, null, new Color(0, 0, 0)));
-		panel_Dades_Clilent.setBounds(31, 28, 339, 104);
+		panel_Dades_Clilent.setBounds(31, 28, 339, 149);
 		frmPacksmarketingJimenez.getContentPane().add(panel_Dades_Clilent);
 		panel_Dades_Clilent.setLayout(null);
 		
 		JLabel lblAntiguitat = new JLabel("Antiguitat");
-		lblAntiguitat.setBounds(39, 23, 43, 13);
+		lblAntiguitat.setBounds(28, 23, 64, 13);
 		panel_Dades_Clilent.add(lblAntiguitat);
 		
 		textEntradaAny = new JTextField();
-		textEntradaAny.setBounds(111, 20, 96, 19);
+		textEntradaAny.setBounds(150, 20, 84, 19);
 		panel_Dades_Clilent.add(textEntradaAny);
 		textEntradaAny.setColumns(10);
 		
 		JLabel lblAny = new JLabel("any");
-		lblAny.setBounds(236, 23, 16, 13);
+		lblAny.setBounds(271, 23, 34, 13);
 		panel_Dades_Clilent.add(lblAny);
 		
 		JButton btnValicar = new JButton("VALIDAR");
-		btnValicar.setBounds(96, 74, 84, 20);
+		btnValicar.setBounds(150, 109, 84, 20);
 		panel_Dades_Clilent.add(btnValicar);
+		
+		JLabel lblPackDe = new JLabel("Pack de");
+		lblPackDe.setBounds(28, 56, 64, 13);
+		panel_Dades_Clilent.add(lblPackDe);
+		
+		JLabel lblTipusDe = new JLabel("Tipus de");
+		lblTipusDe.setBounds(28, 83, 64, 13);
+		panel_Dades_Clilent.add(lblTipusDe);
+		
+		JComboBox comboBoxPackDe = new JComboBox();
+		comboBoxPackDe.setBounds(150, 49, 110, 20);
+		comboBoxPackDe.addItem("BASIC");
+		comboBoxPackDe.addItem("ESTANDAR");
+		comboBoxPackDe.addItem("FULL");
+		comboBoxPackDe.addItem("PREMIUM");
+		panel_Dades_Clilent.add(comboBoxPackDe);
+		
+		JComboBox comboBoxTipusDe = new JComboBox();
+		comboBoxTipusDe.setBounds(150, 79, 110, 20);
+		comboBoxTipusDe.addItem("INDIVIDUAL");
+		comboBoxTipusDe.addItem("EMPRESA");
+		panel_Dades_Clilent.add(comboBoxTipusDe);
 		
 		JPanel panel_Campanya = new JPanel();
 		panel_Campanya.setBorder(new TitledBorder(new EtchedBorder(EtchedBorder.LOWERED, new Color(255, 255, 255), new Color(160, 160, 160)), "Campanya", TitledBorder.LEADING, TitledBorder.TOP, null, new Color(0, 0, 0)));
-		panel_Campanya.setBounds(31, 144, 173, 104);
+		panel_Campanya.setBounds(31, 197, 339, 182);
 		frmPacksmarketingJimenez.getContentPane().add(panel_Campanya);
 		panel_Campanya.setLayout(null);
 		
+		JLabel lblDte = new JLabel("Dte.");
+		lblDte.setBounds(28, 30, 44, 12);
+		panel_Campanya.add(lblDte);
+		
+		textDte = new JTextField();
+		textDte.setEditable(false);
+		textDte.setBounds(145, 27, 111, 18);
+		panel_Campanya.add(textDte);
+		textDte.setColumns(10);
+		
+		JLabel lblEuros = new JLabel("€");
+		lblEuros.setBounds(271, 30, 44, 12);
+		panel_Campanya.add(lblEuros);
+		
+		JLabel lblGestioDeXXSS = new JLabel("Gestio de XXSS");
+		lblGestioDeXXSS.setBounds(28, 60, 94, 12);
+		panel_Campanya.add(lblGestioDeXXSS);
+		
+		JLabel lblPublicitatsSEM = new JLabel("Publicitats SEM");
+		lblPublicitatsSEM.setBounds(28, 89, 94, 12);
+		panel_Campanya.add(lblPublicitatsSEM);
+		
+		JComboBox comboBoxGestioDeXXSS = new JComboBox();
+		comboBoxGestioDeXXSS.setBounds(145, 55, 111, 20);
+		comboBoxGestioDeXXSS.addItem("Sí");
+		comboBoxGestioDeXXSS.addItem("No");
+		panel_Campanya.add(comboBoxGestioDeXXSS);
+		
+		JComboBox comboBoxPublicitatSEM = new JComboBox();
+		comboBoxPublicitatSEM.setBounds(145, 89, 111, 20);
+		comboBoxPublicitatSEM.addItem("Sí");
+		comboBoxPublicitatSEM.addItem("No");
+		panel_Campanya.add(comboBoxPublicitatSEM);
+		
+		JButton btnEsborrarTot = new JButton("ESBORRAR TOT");
+		btnEsborrarTot.setBounds(131, 119, 148, 20);
+		panel_Campanya.add(btnEsborrarTot);
+		
+		JButton btnCalcular = new JButton("CALCULAR");
+		btnCalcular.setBounds(145, 149, 111, 20);
+		panel_Campanya.add(btnCalcular);
+		
 		JPanel panel_PREUS = new JPanel();
 		panel_PREUS.setBorder(new TitledBorder(new EtchedBorder(EtchedBorder.LOWERED, new Color(255, 255, 255), new Color(160, 160, 160)), "PREUS", TitledBorder.LEADING, TitledBorder.TOP, null, new Color(0, 0, 0)));
-		panel_PREUS.setBounds(31, 271, 173, 104);
+		panel_PREUS.setBounds(31, 403, 339, 130);
 		frmPacksmarketingJimenez.getContentPane().add(panel_PREUS);
 		panel_PREUS.setLayout(null);
 		
+		JLabel lblBase = new JLabel("Base");
+		lblBase.setBounds(28, 29, 44, 12);
+		panel_PREUS.add(lblBase);
+		
+		textBase = new JTextField();
+		textBase.setEditable(false);
+		textBase.setBounds(28, 51, 96, 18);
+		panel_PREUS.add(textBase);
+		textBase.setColumns(10);
+		
+		JLabel lblPreuEuros = new JLabel("€");
+		lblPreuEuros.setBounds(134, 54, 25, 12);
+		panel_PREUS.add(lblPreuEuros);
+		
+		JLabel lblIVA = new JLabel("IVA");
+		lblIVA.setBounds(179, 29, 44, 12);
+		panel_PREUS.add(lblIVA);
+		
+		textIVA = new JTextField();
+		textIVA.setEditable(false);
+		textIVA.setColumns(10);
+		textIVA.setBounds(179, 51, 96, 18);
+		panel_PREUS.add(textIVA);
+		
+		JLabel lblPreuEurosIVA = new JLabel("€");
+		lblPreuEurosIVA.setBounds(285, 54, 25, 12);
+		panel_PREUS.add(lblPreuEurosIVA);
+		
+		JLabel lblTotal = new JLabel("TOTAL");
+		lblTotal.setFont(new Font("Tahoma", Font.BOLD, 10));
+		lblTotal.setBounds(70, 90, 44, 12);
+		panel_PREUS.add(lblTotal);
+		
+		textTotal = new JTextField();
+		textTotal.setEditable(false);
+		textTotal.setBounds(134, 87, 96, 18);
+		panel_PREUS.add(textTotal);
+		textTotal.setColumns(10);
+		
+		JLabel lblTotalEuro = new JLabel("€");
+		lblTotalEuro.setBounds(240, 90, 25, 12);
+		panel_PREUS.add(lblTotalEuro);
+		
 		JPanel panel_Errors_Alertes = new JPanel();
 		panel_Errors_Alertes.setBorder(new TitledBorder(new EtchedBorder(EtchedBorder.LOWERED, new Color(255, 255, 255), new Color(160, 160, 160)), "Error i Alertes", TitledBorder.LEADING, TitledBorder.TOP, null, new Color(0, 0, 0)));
-		panel_Errors_Alertes.setBounds(31, 400, 173, 104);
+		panel_Errors_Alertes.setBounds(31, 551, 339, 57);
 		frmPacksmarketingJimenez.getContentPane().add(panel_Errors_Alertes);
 		panel_Errors_Alertes.setLayout(null);
+		
+		textErrorAlertes = new JTextField();
+		textErrorAlertes.setEditable(false);
+		textErrorAlertes.setBounds(28, 20, 287, 18);
+		panel_Errors_Alertes.add(textErrorAlertes);
+		textErrorAlertes.setColumns(10);
 	}
 }

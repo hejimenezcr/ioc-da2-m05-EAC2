@@ -1,3 +1,5 @@
+0 -> Crearemos un proyecto de Java pero la hora de coger un fichero sera de "WindowBuilder / Swing Designer / Aplication Window".
+
 1 -> En el apartado de Disgn estipularemos las caracteristicas de la pantalla.
 
 2 -> En "frame" buscaremos el parametro "resizeable" para poder estipular que no cambie el tamañp de la pantalla estipilando en "false".
@@ -8,7 +10,7 @@
 
 5 -> En el menu central en el apartado "Containers" clicaremos sobre "JPanel" para poder crear un contenedor. En uno de su apartados estipular apartado "layouts" clicaremos sobre "Absolute Layout", para poder ubicar las los diverso compontes como sea necesario para nuetras nececisades.
 
-6 -> Que daa uno de los JPanel les pondremos un nombre para poder identificarlos.
+6 -> Que cada uno de los JPanel les pondremos un nombre para poder identificarlos.
 
 JFrame
  ├── JPanel (Dades Clients)
@@ -16,32 +18,50 @@ JFrame
  ├── JPanel (PREUS)
  └── JPanel (Errors i Alertes)
 
-7 -> zzzzzzzzzz
+7 -> Dentro de cada JPanel pondremos los componentes que necesitarenmos
+
+JPanel (Dades Clients)
+ ├── JLabel (Antiguetat)
+ ├── JLabel (anys)
+ ├── JLabel (Pack de)
+ ├── JLabel (Tipus de)
+ ├── JTextField (Antiguetat)
+ ├── JComboBox (Pack de)
+ ├── JComboBox (Tipus de) 
+ └── JButton (VALIDAR)
+ 
+JPanel (Campanya)
+ ├── JLabel (Dte)
+ ├── JTextField (Dte)
+ ├── JLabel (€)
+ ├── JLabel (Gestio de XXSS)
+ ├── JLabel (Publicitats SEM)
+ ├── JComboBox (ESBORRAR TOT)
+ └── JComboBox (CALCULAR)
+
+JPanel (PREUS)
+ ├── JLabel (Base)
+ ├── JTextField (Base)
+ ├── JLabel (€)
+ ├── JLabel (IVA)
+ ├── JTextField (IVA)
+ ├── JLabel (€)
+ ├── JLabel (TOTAL) 
+ ├── JTextField (TOTAL)
+ └── JLabel (€)
+
+JPanel (Errors i Alertes)
+ ├── JTextField (Errors Alertes)
+ └── JXXX (xxx)
+ 
+
 
 8 -> Pondremos el boton i despues lo explicamos como se llamaran las etiquetas para que sea identificatorio
 
 
 ------------------------------------------------------------------------------------
 
-2. COMPONENTES QUE NECESITAS
-📌 Datos del cliente
-JTextField → antigüedad
-JComboBox → paquete de servicios
-JComboBox → tipo empresa
-JButton → validar
-📌 Campaña
-JComboBox → redes sociales (Sí/No)
-JComboBox → SEM (Sí/No)
-JTextField → descuento
-JButton → calcular
-Botón J → restablecer
-📌 Salida
-JTextField → precio base
-JTextField → antes de impuestos
-JTextField → IVA
-JTextField → total
-📌 Errores
-JTextArea → mensajes
+
 
 
 
