@@ -53,10 +53,12 @@ JPanel (PREUS)
 JPanel (Errors i Alertes)
  ├── JTextField (Errors Alertes)
  └── JXXX (xxx)
- 
 
 
-8 -> Pondremos el boton i despues lo explicamos como se llamaran las etiquetas para que sea identificatorio
+8 -> En las JTextField aplicaremos un metodo que sino esta tratando un parametro que borre el valor anterior y ponga nada o 0 o "" o false o null o 0.0f o 0.0d o 0.0.
+esto lo aplicaremos a las etiquetas "textTotal" y "textErrorAlertes". 
+
+9 -> xxxxxx
 
 
 ------------------------------------------------------------------------------------

@@ -15,7 +15,7 @@ import java.awt.Font;
 import java.awt.event.FocusAdapter;
 import java.awt.event.FocusEvent;
 
-public class Pantalla {
+public class Pantalla_27032026 {
 
 	private JFrame frmPacksmarketingJimenez;
 	private JTextField textEntradaAny;
@@ -32,7 +32,7 @@ public class Pantalla {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					Pantalla window = new Pantalla();
+					Pantalla_27032026 window = new Pantalla_27032026();
 					window.frmPacksmarketingJimenez.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -44,7 +44,7 @@ public class Pantalla {
 	/**
 	 * Create the application.
 	 */
-	public Pantalla() {
+	public Pantalla_27032026() {
 		initialize();
 	}
 
