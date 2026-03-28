@@ -1,49 +1,23 @@
 ChatGPT
 
-te paso el codigo como lo tengo escrito y despues te paso uno de los puntos que tengo que ir implementando
+te paso el codigo como lo tengo escrito y despues te paso el documento donde explica el ejercicio
 
 el codido es de la fecha 27/03/2026
-
-añadiendo al final
-
-Com podeu veure, la pantalla està dividida en quatre blocs o parts: la superior «Dades client»,
-inicialment activada, la segona, «Campanya», inicialment desactivada i les dues inferiors,
-«Preus» i «Errors i Alertes», que contindran camps de tipus text (a la imatge es veu com quadres grisos),
-que servirà per notificar per pantalla els preus i els errors que es produeixin en les validacions dels
-camps d’entrada, respectivament. Cal tenir en compte que el contingut del camp «Errors i Alertes» s’ha d’anar
-actualitzant o esborrant depenent de si volem o no informar d’algun error en aquell moment.
 
 ------------------------------------------------------------------------------------
 Gemini
 
-te paso el codigo como lo tengo escrito y despues te paso uno de los puntos que tengo que ir implementando
+te paso el codigo como lo tengo escrito y despues te paso el documento donde explica el ejercicio
 
 el codido es de la fecha 27/03/2026
 
-añadiendo al final
-
-Com podeu veure, la pantalla està dividida en quatre blocs o parts: la superior «Dades client»,
-inicialment activada, la segona, «Campanya», inicialment desactivada i les dues inferiors,
-«Preus» i «Errors i Alertes», que contindran camps de tipus text (a la imatge es veu com quadres grisos),
-que servirà per notificar per pantalla els preus i els errors que es produeixin en les validacions dels
-camps d’entrada, respectivament. Cal tenir en compte que el contingut del camp «Errors i Alertes» s’ha d’anar
-actualitzant o esborrant depenent de si volem o no informar d’algun error en aquell moment.
 
 ------------------------------------------------------------------------------------
 Codeium
 
-te paso el codigo como lo tengo escrito y despues te paso uno de los puntos que tengo que ir implementando
+te paso el codigo como lo tengo escrito y despues te paso el documento donde explica el ejercicio
 
 el codido es de la fecha 27/03/2026
-
-añadiendo al final
-
-Com podeu veure, la pantalla està dividida en quatre blocs o parts: la superior «Dades client»,
-inicialment activada, la segona, «Campanya», inicialment desactivada i les dues inferiors,
-«Preus» i «Errors i Alertes», que contindran camps de tipus text (a la imatge es veu com quadres grisos),
-que servirà per notificar per pantalla els preus i els errors que es produeixin en les validacions dels
-camps d’entrada, respectivament. Cal tenir en compte que el contingut del camp «Errors i Alertes» s’ha d’anar
-actualitzant o esborrant depenent de si volem o no informar d’algun error en aquell moment.
 
 
 ------------------------------------------------------------------------------------
