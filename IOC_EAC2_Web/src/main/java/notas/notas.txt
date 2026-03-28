@@ -1,0 +1,3 @@
+Expliacar como se crea spring en java
+
+copiar las cosasa del proyecto anterior de we para tener ya cosas listas
