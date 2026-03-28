@@ -8,7 +8,9 @@
 
 4 -> En el menu central en el apartado "layouts" clicaremos sobre "Absolute Layout".
 
-5 -> En el menu central en el apartado "Containers" clicaremos sobre "JPanel" para poder crear un contenedor. En uno de su apartados estipular apartado "layouts" clicaremos sobre "Absolute Layout", para poder ubicar las los diverso compontes como sea necesario para nuetras nececisades.
+5 -> En el menu central en el apartado "Containers" clicaremos sobre "JPanel" para poder crear un contenedor.
+En uno de su apartados estipular apartado "layouts" clicaremos sobre "Absolute Layout", para poder ubicar las
+los diverso compontes como sea necesario para nuetras nececisades.
 
 6 -> Que cada uno de los JPanel les pondremos un nombre para poder identificarlos.
 
@@ -55,10 +57,11 @@ JPanel (Errors i Alertes)
  └── JXXX (xxx)
 
 
-8 -> En las JTextField aplicaremos un metodo que sino esta tratando un parametro que borre el valor anterior y ponga nada o 0 o "" o false o null o 0.0f o 0.0d o 0.0.
+8 -> En las JTextField aplicaremos un metodo que sino esta tratando un parametro que borre
+el valor anterior y ponga nada o 0 o "" o false o null o 0.0f o 0.0d o 0.0.
 esto lo aplicaremos a las etiquetas "textTotal" y "textErrorAlertes". 
 
-9 -> xxxxxx
+9 -> Se aplican metodos de contro y validacion para que el aplicativo sono de error de funcionamiento
 
 
 ------------------------------------------------------------------------------------
@@ -76,85 +79,8 @@ esto lo aplicaremos a las etiquetas "textTotal" y "textErrorAlertes".
 Codio a revisar o ver donde va....
 
 
-CÓDIGO BASE DE LA VENTANA
-
-import javax.swing.*;
-import javax.swing.border.TitledBorder;
-import java.awt.*;
-
-public class PacksMarketing extends JFrame {
-
-    public PacksMarketing() {
-        setTitle("PacksMarketing TuApellido");
-        setSize(500, 600);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setLocationRelativeTo(null);
-        getContentPane().setLayout(null);
-
-        crearDadesClient();
-        crearCampanya();
-        crearPreus();
-        crearErrors();
-    }
-
-    public static void main(String[] args) {
-        SwingUtilities.invokeLater(() -> {
-            new PacksMarketing().setVisible(true);
-        });
-    }
-
 
 ------------------------------------------------------------------------------------
-
-3. PANEL "PADRES CLIENTES"
-
-private void crearDadesClient() {
-    JPanel panel = new JPanel();
-    panel.setBorder(new TitledBorder("Dades Clients"));
-    panel.setBounds(20, 20, 440, 140);
-    panel.setLayout(null);
-    add(panel);
-
-    JLabel lblAntiguitat = new JLabel("Antiguitat");
-    lblAntiguitat.setBounds(10, 25, 100, 20);
-    panel.add(lblAntiguitat);
-
-    JTextField txtAntiguitat = new JTextField();
-    txtAntiguitat.setBounds(120, 25, 80, 20);
-    txtAntiguitat.setToolTipText("Introdueix anys (0-150)");
-    panel.add(txtAntiguitat);
-
-    JLabel lblAnys = new JLabel("anys");
-    lblAnys.setBounds(210, 25, 50, 20);
-    panel.add(lblAnys);
-
-    JLabel lblPack = new JLabel("Pack de");
-    lblPack.setBounds(10, 55, 100, 20);
-    panel.add(lblPack);
-
-    JComboBox<String> comboPack = new JComboBox<>();
-    comboPack.addItem("BASIC");
-    comboPack.addItem("ESTÀNDARD");
-    comboPack.addItem("FULL");
-    comboPack.addItem("PRÈMIUM");
-    comboPack.setBounds(120, 55, 150, 20);
-    panel.add(comboPack);
-
-    JLabel lblTipus = new JLabel("Tipus de");
-    lblTipus.setBounds(10, 85, 100, 20);
-    panel.add(lblTipus);
-
-    JComboBox<String> comboEmpresa = new JComboBox<>();
-    comboEmpresa.addItem("Autònom");
-    comboEmpresa.addItem("PIME");
-    comboEmpresa.addItem("Gran empresa");
-    comboEmpresa.setBounds(120, 85, 150, 20);
-    panel.add(comboEmpresa);
-
-    JButton btnValidar = new JButton("VALIDAR");
-    btnValidar.setBounds(150, 110, 120, 25);
-    panel.add(btnValidar);
-}
 
 
 

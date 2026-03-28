@@ -4,6 +4,8 @@ te paso el codigo como lo tengo escrito y despues te paso el documento donde exp
 
 el codido es de la fecha 27/03/2026
 
+nos sugiere cosas funcionales y que no tiene logica
+
 ------------------------------------------------------------------------------------
 Gemini
 
@@ -11,6 +13,10 @@ te paso el codigo como lo tengo escrito y despues te paso el documento donde exp
 
 el codido es de la fecha 27/03/2026
 
+se añadiendo codido de forma  ordenada para que las funcionalidades sean correctas
+
+se añadido los controles de errores y de acciones para que el usuario pueda interactuar con el programa
+de forma correcta sin que falle el aplicativo
 
 ------------------------------------------------------------------------------------
 Codeium
@@ -19,6 +25,7 @@ te paso el codigo como lo tengo escrito y despues te paso el documento donde exp
 
 el codido es de la fecha 27/03/2026
 
+nos sugiere cosas funcionales y que no tiene logica
 
 ------------------------------------------------------------------------------------
 
