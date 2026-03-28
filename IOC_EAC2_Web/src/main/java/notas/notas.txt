@@ -1,3 +1,18 @@
-Expliacar como se crea spring en java
+1 -> Crearemos un nuevo proyrcto de spring "Spring Starter Project"
 
-copiar las cosasa del proyecto anterior de we para tener ya cosas listas
+le podemos poner el nombre que queramos, lo cambiaremos a type Maven y en descripcion haremos un pequeño comentario
+
+2 -> Daremos siguiente y busacaremos spring web y spring web services
+
+3 -> Crearemos la estructura en HTML para crear la web
+
+4 -> Crearemos un validador de entero y que no este el valor bacio
+
+5 -> Crearemos una web recogiendo el resultado como el error del valor como del resultado
+
+6 -> Para poder verificar el funcionamiento ejecutaremos el servicio del web
+
+7 -> Con el boton derecho clicaremos sobre "Run As" y seleccionaremos "Spring Boot App"
+
+8 -> Iremos al navegador y escribiremos "http://localhost:8080/"
+
