@@ -1,1 +1,14 @@
-s
+Amb l'ajut de l'assistent, creeu una classe amb dos mètodes estàtics. Tots dos rebran una cadena de caràcters com a argument i retornaran:
+
+    • El primer mètode ha de retornar el nombre total de vocals que conté la cadena (sense accents).
+      
+    • El segon mètode ha de retornar la mateixa cadena però substituint tots els espais en blanc per guions baixos (_).
+      
+      Per exemple, si la cadena rebuda és "Entorns de Desenvolupament", la cadena resultant hauria de ser "Entorns_de_desenvolupament". Considereu que no hi ha ni accents ni lletres estranyes a l'idioma anglès, com ho serien ç, ñ, l· ...
+      
+    • Al requadre següent:
+    
+            ◦ Inseriu una captura de pantalla on es vegi la classe resultant. Hi heu d'incloure els comentaris /* */ on expliqueu què ha de fer cadascun dels mètodes.
+        ◦ Responeu a continuació, les següents qüestions:
+            ▪ Per a cadascun dels mètodes: què heu escrit vosaltres i què ha suggerit Codeium.
+            ▪ Trobeu que us ha estalviat feina? Ha estat fàcil utilitzar l'assistent?
